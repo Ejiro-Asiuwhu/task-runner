@@ -36,17 +36,30 @@
     <div id="todo-container">
         <h4>My Tasks</h4>
         <span>4 out of 6 task</span>
-        <input type="text">
+        <input type="text" id="task-input" onkeydown="getValue(this)">
         <ul>
-            <li>Natours</li>
+            <li contenteditable="true">Natours</li>
             <li>Experiential</li>
             <li>Magnous</li>
             <li>Autodom</li>
         </ul>
     </div>
 
-    <script>
 
+
+
+    <script>
+        const taskInput = document.querySelector('#task-input');
+        const ul = document.querySelector('ul');
+        const createLi = document.createElement('li');
+
+
+
+        function getValue(ele) {
+            if (event.key === 'Enter') {
+                alert(ele.value);
+            }
+        }
     </script>
 </body>
 

@@ -9,155 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    :root {
-        --colour-1: #42e6a4;
-        --colour-2: #e25822;
-        --colour-3: #380e7f;
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        background-color: var(--colour-1);
-    }
-
-    /* h1,
-    h2 {
-        font-weight: 500;
-        margin: 0;
-    }
-
-    .completed {
-        text-decoration: line-through;
-        color: var(--colour-2);
-    }
-
-    #todo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 20rem;
-        height: 30rem;
-        margin: 0 auto;
-        background-color: #f7f7f7;
-        padding: 4rem;
-    }
-
-    input {
-        outline: none;
-        border: 0;
-        border-bottom: 2px solid #dff6f0;
-        background: #f7f7f7;
-    }
-
-    h4 {
-        text-align: left;
-        font-size: 2rem;
-        margin: 0;
-    }
-
-    li:nth-child(2n) {
-    background: #e9e9e9;
-    } */
-
-
-
-    h1 {
-        text-transform: uppercase;
-        background: var(--colour-3);
-        color: white;
-        margin: 0;
-        padding: 10px 28px;
-        font-weight: normal;
-    }
-
-    input {
-        background: white;
-        width: 100%;
-        box-sizing: border-box;
-        height: 50px;
-        font-size: 20px;
-        font-weight: 0.5px;
-        padding-left: 25px;
-        border: 3px solid var(--colour-3);
-        color: var(--colour-3);
-    }
-
-    input:focus {
-        background: #edf1f5;
-        outline: none;
-        color: var(--colour-3);
-    }
-
-    span {
-        margin-right: 10px;
-        text-align: center;
-        height: 50px;
-        width: 0;
-        opacity: 0;
-        transition: 0.3s linear;
-    }
-
-    i {
-        cursor: pointer;
-    }
-
-
-    #todo {
-        margin: 0 auto;
-        box-shadow: 1px 1px .2rem black;
-        max-width: 400px;
-        height: 100%;
-        background: white;
-        position: relative;
-    }
-
-
-    .todos {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .todos li {
-        background: #f7f7f7;
-        height: 50px;
-        line-height: 50px;
-        cursor: pointer;
-        font-size: 20px;
-    }
-
-    .todos li:nth-child(2n) {
-        background: #edf1f5;
-    }
-
-    .todos li:hover span {
-        width: 50px;
-        opacity: 1.0;
-        margin-left: 5px;
-    }
-
-    .display {
-        display: none;
-        transition: 0.3s linear;
-    }
-
-    .checked {
-        color: var(--colour-2);
-        text-decoration: line-through;
-    }
-
-    .fa-pencil-alt {
-        float: right;
-        padding-top: 8px;
-    }
-
-    .fa-trash-alt {
-        color: #7f7fd5;
-    }
+  
+    
 </style>
 
 <body>
@@ -165,7 +21,7 @@
     <main id="todo">
         <h1> Task Runner <i id="pencil" class="fas fa-pencil-alt"></i> </h1>
 
-        <input type="text" placeholder="Add New Todo">
+        <input type="text" placeholder="Add Items">
 
         <ul class="todos">
 
@@ -192,13 +48,7 @@
         //     }
         // })
 
-        // // $("ul").on("click", "li", function() {
-        // // $(this).toggleClass("completed");
-        // // });
-
-        // ul.addEventListener('click', () => {
-        //     ul.classList.toggle('completed');
-        // });
+  
 
         // // function getValue(ele) {
         // //     if (event.key === 'Enter') {
@@ -208,7 +58,7 @@
 
 
         // //         // if (ele.value === '') {
-        // //         //     alert('You can\'t add empty item');
+        // //         //     alert('You can't add empty item');
         // //         //     //    ele.stopPropagation();
         // //         // } else {
         // //         //     // ul.appendChild(createLi).textContent = ele.value;
@@ -216,14 +66,12 @@
         // //     }
         // // }
 
-        //selecting dom elements for manipulation
         const input = document.querySelector("input[type = 'text']");
         const ul = document.querySelector("ul");
         const container = document.querySelector("div");
         const lists = document.querySelectorAll("li");
         const spans = document.getElementsByTagName("span");
         const pencil = document.querySelector("#pencil");
-        const clearBtn = document.querySelector(".clear");
 
 
 
